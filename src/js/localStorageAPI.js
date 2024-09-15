@@ -1,7 +1,9 @@
 function add(task) {
-  const tasks = JSON.parse(localStorage.getItem('tasks')) ?? [];
+  const tasks = getAll();
   tasks.push(task);
   localStorage.setItem('tasks', JSON.stringify(tasks));
 }
-
-export const localStorageAPI = { add };
+function getAll() {
+  return JSON.parse(localStorage.getItem('tasks')) ?? [];
+}
+export const localStorageAPI = { add, getAll };
