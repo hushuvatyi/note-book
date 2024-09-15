@@ -1,2 +1,0 @@
-const t={formEl:document.querySelector("#task-form"),taskListEl:document.querySelector("#task-list")};function e(t){const e={};return[...new FormData(t.currentTarget)].reduce(((t,[n,r])=>{r||alert("Enter all inputs"),e[n]=r}),""),e}const n={add:function(t){var e;const n=null!==(e=JSON.parse(localStorage.getItem("tasks")))&&void 0!==e?e:[];n.push(t),localStorage.setItem("tasks",JSON.stringify(n))}};t.formEl.addEventListener("submit",(function(t){t.preventDefault();const r=e(t);n.add(r)}));
-//# sourceMappingURL=index.01aa82ed.js.map
