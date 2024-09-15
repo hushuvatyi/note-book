@@ -1,5 +1,7 @@
+import { nanoid } from 'nanoid';
+
 export function createTask(event) {
-  const task = {};
+  const task = { id: nanoid() };
   const formData = [...new FormData(event.currentTarget)];
 
   formData.reduce((acc, [key, value]) => {
