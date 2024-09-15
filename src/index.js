@@ -6,3 +6,7 @@
  *     <p>Текст</p>
  * </li>
  */
+import { refs } from './js/refs';
+import { submitHandler } from './js/submitHandler';
+
+refs.formEl.addEventListener('submit', submitHandler);
